@@ -32,4 +32,6 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
+		
+		<h1 class="cirkel-normal">Clínica Priméra</h1>
 	
