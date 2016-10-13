@@ -33,5 +33,30 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 		
-		<h1 class="cirkel-normal">Clínica Priméra</h1>
+		<header id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<div class="header-logo-box">
+							<a href="<?php echo esc_html(home_url("/")); ?>" title="Clínica Priméra"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logo/primera-logo.png" alt="Clínica Priméra"></a>
+						</div>
+					</div>
+					<div class="col-lg-offset-3 col-lg-6 mobile-padding">
+						<nav id="main-nav">
+							<?php
+								$header_menu_args = array(
+									"theme_location"	=> "header",
+									"container"				=> "ul",
+									"menu_class"			=> "nav-links"
+								);
+								wp_nav_menu( $header_menu_args );
+							?>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-btn">
+				<i class="ion-ios-arrow-down"></i>
+			</div>
+		</header>
 	

@@ -11,6 +11,22 @@
 
 ?>
 
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<?php get_sidebar("footer"); ?>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-links">
+						<a class="footer-link-social" href="https://www.facebook.com/ClinicaPrimera" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a class="footer-link-social" href="https://www.instagram.com/clinicaprimera" title="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a class="footer-link-delucca" href="http://agenciadelucca.com.br/" title="Agência Delucca" target="_blank">AD</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 	
 </div><!-- #page -->
 
