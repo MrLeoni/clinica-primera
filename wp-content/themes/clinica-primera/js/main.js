@@ -21,4 +21,24 @@ $(document).ready(function() {
     }
   });
   
+  // Parallax Efect
+  $('.parallax').each(function(){
+  	var $obj = $(this);
+  	$(window).scroll(function() {
+  		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+  		var bgpos = '50% '+ yPos + 'px';
+  		$obj.css('background-position', bgpos );
+  	}); 
+  });
+  
+  // Toggle active class on topic title in FAQ page
+  function faqToggleClass() {
+    var menu = $('.panel-title a');
+    menu.click(function () {
+      menu.not(this).removeClass('faq-active');
+      $(this).toggleClass('faq-active');
+    });
+  }
+  faqToggleClass();
+  
 });

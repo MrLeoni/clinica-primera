@@ -193,3 +193,16 @@ function register_categoria_custom_taxonomy() {
 	
 	register_taxonomy("categoria", "complementos", $args);
 }
+
+/**
+ * Adding ".active" CSS class in menu.
+ * Only apply CSS class if we are in the page that correspond to the menu-item 
+ */
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
