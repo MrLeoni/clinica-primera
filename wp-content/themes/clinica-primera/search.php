@@ -11,38 +11,37 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'clinica-primera' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+			<section id="search">
+				<div class="container">
+					<div class="row">
+						
+						<?php
+						if ( have_posts() ) : ?>
+							<header class="page-header">
+								<h1 class="page-title"><?php printf( esc_html__( 'Resultados para: %s', 'clinica-primera' ), '<span class="cirkle-normal">' . get_search_query() . '</span>' ); ?></h1>
+							</header><!-- .page-header -->
+							<?php /* Start the Loop */
+							while ( have_posts() ) : the_post(); ?>
+								<div class="col-xs-6 col-sm-6 col-lg-3">
+									<div class="post-wrapper">
+										<div class="post-content">
+											<?php
+												the_title('<p><b>', '</b></p>');
+												the_content();
+											?>
+										</div>
+									</div>
+								</div>
+							<?php endwhile;
+						else :
+							get_template_part( 'template-parts/content', 'none' );
+						endif; ?>
+						
+					</div>
+				</div>
+			</section>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

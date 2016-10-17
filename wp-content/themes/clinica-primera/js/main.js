@@ -41,4 +41,16 @@ $(document).ready(function() {
   }
   faqToggleClass();
   
+  // Home Slider args
+  $(".home-slider").bxSlider({
+    mode: "fade",
+    pagerCustom: ".custom-pager",
+    responsive: true,
+    controls: false,
+    auto: true,
+    speed: 800,
+    pause: 8000,
+    autoHover: true,
+  });
+  
 });

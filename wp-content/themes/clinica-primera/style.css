@@ -426,7 +426,7 @@ body {
   font-family: "Lato", sans-serif ;
   font-size: 14px;
   font-weight: 400;
-  background-color: #ccc;
+  background-color: #ddd;
   color: #5a2049;
 }
 
@@ -463,6 +463,12 @@ ul {
 
 /* Classes */
 
+#single-page,
+#single-post {
+	padding: 40px 0 60px;
+	background-color: #fff;
+}
+
 .cirkel-light {
 	font-family: "CirkelProLight";
 	font-weight: lighter;
@@ -490,6 +496,10 @@ ul {
 
 .img-margin {
 	margin: auto 0;
+}
+
+.ghost {
+	padding: 0 0 40px;
 }
 
 /* Buttons */
@@ -685,6 +695,20 @@ a:hover.fill:after {
 	color: #f05f7b;
 }
 
+/* Current Page */
+
+.current-menu-item:after {
+	left: 0!important;
+	opacity: 1!important;
+}
+
+.current-menu-item.menu-item a:link,
+.current-menu-item.menu-item a:visited {
+	color: #f05f7b;
+}
+
+/* Mobile Btn */
+
 .mobile-btn {
 	display: none;
 	background-color: #f05f7b;
@@ -787,7 +811,7 @@ a:hover.fill:after {
 
 #home {
 	background-color: #fff;
-	padding: 40px 0 50px;
+	padding: 0 0 50px;
 }
 
 #home h1 {
@@ -809,6 +833,90 @@ a:hover.fill:after {
 	font-family: "CirkelProNormal";
 	font-weight: 500;
 	color: #f05f7b;
+}
+
+/* Slider */
+
+.slider-custom-wrapper {
+	position: relative;
+	margin: 0 0 40px;
+}
+
+.slider-custom-wrapper .bx-wrapper {
+  margin: 0 auto;
+}
+
+.slider-custom-wrapper .bx-wrapper .bx-viewport {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  left: 0;
+  background: #fff;
+}
+
+.slider-custom-wrapper .bx-wrapper .bx-pager {
+  padding-top: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.slider-custom-wrapper .bx-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slider-content-box {
+	color: #f05f7b;
+	font-size: 1.5em;
+}
+
+.slider-content-box h2 {
+	font-size: 3em;
+	color: #5a2049;
+}
+
+.slider-content-box,
+.custom-pager-box {
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 100%;
+	z-index: 999;
+}
+
+.slider-content-box {
+	top: 25%;
+}
+
+.custom-pager-box {
+	bottom: 10%;
+}
+.custom-pager-box a {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding: 0 5px;
+	border-radius: 50%;
+	border: 1px solid #f05f7b;
+	background-color: transparent;
+	-webkit-transition: 0.3s ease-out;
+	transition: 0.3s ease-out;
+}
+
+.custom-pager-box span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+.custom-pager-box a:hover span,
+.custom-pager-box a.active span {
+	background-color: #5a2049;
 }
 
 /*----------------------------
@@ -835,7 +943,7 @@ a:hover.fill:after {
 }
 
 /*----------------------------
-9.6 Contact & Newsletter
+9.6 Contact, Newsletter & Agendamento
 ----------------------------*/
 
 #contact {
@@ -856,7 +964,17 @@ a:hover.fill:after {
 	transition: 0.2s ease-out;
 }
 
+.contact-input.half {
+	width: 50%;
+}
+
+.contact-select {
+	border-color: #f05f7b;
+	padding: 10px;
+}
+
 .contact-input:focus,
+.contact-select:focus,
 .news-input:focus {
 	outline: none;
 	border-color: #5a2049;
@@ -898,6 +1016,10 @@ a:hover.fill:after {
 	margin: 10px 0 0 98%!important;
 }
 
+.contact-paragraph {
+	margin: 15px 0 0;
+}
+
 /* Newsletter */
 
 .news-col {
@@ -934,6 +1056,27 @@ a:hover.fill:after {
 	margin: 0;
 }
 
+/* Agendamento */
+
+#agendamento {
+	padding: 40px 0 0;
+	background-color: #fff;
+}
+
+#agendamento hr {
+	border-color: #f05f7b;
+	margin: 40px 0;
+}
+
+.map-title {
+	margin: 150px 0 40px;
+	color: #f05f7b;
+	font-size: 2.2em;
+}
+
+.map-box iframe {
+	width: 100%;
+}
 
 /*----------------------------
 9.7 FAQ
@@ -942,7 +1085,7 @@ a:hover.fill:after {
 .faq {
 	margin: 10% 0 0;
 	padding: 0;
-	background-color: #f05f7b;
+	background-color: #f69dae;
 }
 
 .faq h2 {
@@ -990,6 +1133,95 @@ a:hover.fill:after {
 .faq .panel-default>.panel-heading+.panel-collapse>.panel-body {
   border: 0;
   background-color: #fff;
+}
+
+/*----------------------------
+9.8 Tratamentos
+----------------------------*/
+
+#blog {
+	padding: 40px 0 60px;
+	background-color: #fff;
+}
+
+#blog h1 {
+	font-size: 3.2em;
+	color: #f05f7b;
+}
+
+.pre-posts {
+	margin: 0 0 10%;
+}
+
+.post-wrapper {
+	padding: 10px 0 0;
+	border-bottom: 1px solid #f05f7b;
+	margin: 0 0 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.post-content {
+	overflow: hidden;
+	height: 180px;
+	margin: 0 0 50px;
+}
+
+.post-wrapper .post-link {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	display: block;
+	border: 1px solid #f05f7b;
+}
+
+#index,
+#search,
+#archive,
+.error-404 {
+	background-color: #fff;
+	padding: 40px 0 50px;
+}
+
+#index h1,
+#search h1,
+#archive h1,
+.error-404 h1 {
+	margin: 15px 0 25px;
+	color: #f05f7b;
+	font-size: 3.5em;
+	text-align: center;
+}
+
+.error-404.not-found {
+	padding: 7% 0 18%;
+	margin: 0;
+}
+
+.not-found {
+	padding: 0;
+	margin: 7% 0 18%;
+}
+
+.not-found .page-content {
+	text-align: center;
+}
+
+.not-found .page-content p:first-child {
+	margin: 0 0 40px;
+}
+
+.not-found .page-content a:link,
+.not-found .page-content a:visited {
+	color: #f05f7b;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.not-found .page-content a:hover,
+.not-found .page-content a:active {
+	color: #fff;
+	background-color: #f05f7b;
 }
 
 /*----------------------------
@@ -1115,6 +1347,41 @@ a:hover.fill:after {
 		display: block;
 	}
 	
+	/* Home */
+	
+	.slider-content-box {
+    top: 10%;
+	}
+	
+	.slider-content-box {
+		color: #f05f7b;
+		font-size: 1em;
+	}
+	
+	.slider-content-box h2 {
+		font-size: 2em;
+		color: #5a2049;
+	}
+	
+	.custom-pager-box {
+    bottom: 5%;
+	}
+	
+	.custom-pager-box a {
+		width: 10px;
+		height: 10px;
+    padding: 0;
+	}
+	
+	.custom-pager-box span {
+    display: none;
+	}
+	
+	.custom-pager-box a:hover,
+	.custom-pager-box a.active {
+		background-color: #5a2049;
+	}
+	
 	/* Contato & Newsletter */
 	
 	.news-form-group {
@@ -1130,6 +1397,13 @@ a:hover.fill:after {
 		width: 90%;
 	}
 	
+	/* Blog */
+	
+	.post-content {
+		height: 250px;
+		margin: 0 0 60px;
+	}
+	
 }
 
 @media (max-width: 460px) {
@@ -1138,6 +1412,16 @@ a:hover.fill:after {
 	
 	body{
 		font-size: 12px;
+	}
+	
+	/* Home */
+	
+	.slider-content-box {
+    display: none;
+	}
+	
+	.custom-pager-box {
+    display: none;
 	}
 	
 	/* Contato & Newsletter */
@@ -1149,6 +1433,16 @@ a:hover.fill:after {
 	
 	.news-form-group .news-input {
 		width: 85%;
+	}
+	
+	.map-title {
+    margin: 70px 0 30px;
+	}
+	
+	/* Blog */
+	
+	.post-content {
+		height: 290px;
 	}
 	
 }

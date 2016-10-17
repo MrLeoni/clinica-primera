@@ -31,6 +31,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<section id="home">
+				<?php get_template_part("template-parts/content", "slider"); ?>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-7">
