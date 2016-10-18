@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Agência Delucca
 Author URI: http://www.agenciadelucca.com.br
 Description: Estética e Dermatologia
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: clinica-primera
@@ -34,6 +34,15 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	8.1 Captions
 	8.2 Galleries
 9.0 Custom CSS
+	9.1 Setup
+	9.2 Header
+	9.3 Footer
+	9.4 Home
+	9.5 About
+	9.6 Contact, Newsletter & Agendamento
+	9.7 FAQ
+	9.8 Tratamentos
+	9.9 Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Navigation
@@ -83,22 +92,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	width: 200px;
 }
 
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
@@ -107,12 +100,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
 	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
 }
 
 /* Small menu. */
@@ -581,13 +568,15 @@ a:hover.fill:after {
 	display: block;
 	width: 100%;
 	height: auto;
-	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	        filter: blur(2px);
 	-webkit-transition: 0.2s ease-out;
 	transition: 0.2s ease-out;
 }
 
 .aside-box a:hover img {
-	filter: none;
+	-webkit-filter: none;
+	        filter: none;
 }
 
 /* Banner & Parallax */
@@ -847,8 +836,6 @@ a:hover.fill:after {
 }
 
 .slider-custom-wrapper .bx-wrapper .bx-viewport {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
   left: 0;
@@ -1225,7 +1212,7 @@ a:hover.fill:after {
 }
 
 /*----------------------------
-9.X Queries
+9.9 Queries
 ----------------------------*/
 
 @media (max-width: 991px) {
@@ -1243,7 +1230,8 @@ a:hover.fill:after {
 	}
 	
 	.aside-box a img {
-    filter: none;
+    -webkit-filter: none;
+            filter: none;
 	}
 	
 	.banner {
@@ -1446,4 +1434,3 @@ a:hover.fill:after {
 	}
 	
 }
-
