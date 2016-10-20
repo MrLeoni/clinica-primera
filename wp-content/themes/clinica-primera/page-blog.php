@@ -57,11 +57,6 @@ $blog_query = new WP_Query( $blog_args );
 /*------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 
-// Get ACF Fields for posts Links
-$link_name = get_field("post-link-name");
-$link_title = get_field("post-link-title");
-$link_url = get_field("post-link-url");
-
 get_header(); ?>
 
 	<section class="parallax banner" data-speed="10" style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat center 0">
@@ -90,10 +85,10 @@ get_header(); ?>
 										<div class="post-content">
 											<?php
 												the_title('<p><b>', '</b></p>');
-												the_content();
+												the_excerpt();
 											?>
 										</div>
-										<a class="post-link fill normal-btn" href="<?php echo $link_url; ?>" title="<?php echo $link_title; ?>"><?php echo $link_name; ?></a>
+										<a class="post-link fill normal-btn" href="<?php the_permalink(); ?>" title="<?php echo get_the_title(); ?>">Saiba Mais</a>
 									</div>
 								</div>
 							<?php

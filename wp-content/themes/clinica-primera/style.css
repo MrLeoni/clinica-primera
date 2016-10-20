@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Agência Delucca
 Author URI: http://www.agenciadelucca.com.br
 Description: Estética e Dermatologia
-Version: 1.0.1
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: clinica-primera
@@ -42,7 +42,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	9.6 Contact, Newsletter & Agendamento
 	9.7 FAQ
 	9.8 Tratamentos
-	9.9 Queries
+	9.9 Tratamentos Interna
+	9.10 Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Navigation
@@ -1212,7 +1213,45 @@ a:hover.fill:after {
 }
 
 /*----------------------------
-9.9 Queries
+9.9 Tratamentos Interna
+----------------------------*/
+
+.post-banner {
+	background: url(assets/images/banners/contato-banner.png) no-repeat center 0;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#single-post .entry-title {
+	font-size: 3.5em;
+	color: #f05f7b;
+	text-align: center;
+}
+
+.single-post-link {
+	text-align: center;
+	margin-top: 10%;
+}
+
+.single-post-link .normal-btn:link,
+.single-post-link .normal-btn:visited {
+	border: 1px solid #f05f7b;
+	padding: 10px 40px;
+}
+
+.single-post-link .fill:after {
+	left: 0;
+	top: 80%;
+}
+
+.single-post-link .normal-btn:hover:after,
+.single-post-link .normal-btn:active:after {
+	top: 0;
+	left: 0;
+}
+
+/*----------------------------
+9.10 Queries
 ----------------------------*/
 
 @media (max-width: 991px) {
